@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- linking the HTML sheet with the CSS sheet -->
+    <link rel="stylesheet" href="styles.css">
+    <title>Invoicing System</title>
+</head>
+
+<body>
+    <!-- header of the webpage -->
+    <header>
+        <h1>Invoicing System</h1>
+    </header>
+    <!-- start of the main part of the webpage -->
+    <main class="container">
+        <!-- start of the first section -->
+        <section>
+            <form autocomplete="off" class="addingItem">
+                <label class="inputWidth" for="item">Add an item:</label>
+                <label class="inputWidth" for="price">Price per item ($):</label>
+                <label class="inputWidth" for="quantity">Quantity:</label>
+                <input class="inputWidth" type="text" id="item" placeholder="Please add item here" required>
+                <input class="inputWidth" type="number" min="0" step="0.01" id="price" placeholder="Please enter item price" required>
+                <input class="inputWidth" type="number" min="1" id="quantity" placeholder="Please specify quantity" required>
+                <input type="submit" value="Add Item">
+            </form>
+        </section>
+        <!-- end of the first section -->
+
+        <!-- start of the second section -->
+        <section>
+            <h2>invoice</h2>
+            <ol start="0">
+                <li class="topLi">
+                    <span class="item">item name</span>
+                    <span class="itemPrice">item price ($)</span>
+                    <span class="itemQuantity">item quantity</span>
+                    <span class="totalItemPrice">total item price</span>
+                </li>
+                <!-- Invoice items get added dynamically here -->
+            </ol>
+            <div class="calcBill">
+                <p>Subtotal: $<span class="beforeTax">0</span></p>
+                <p>HST(13%): $<span class="tax">0</span></p>
+                <p>Total: $<span class="afterTax">0</span></p>
+            </div>
+        </section>
+        <!-- end of the first section -->
+    </main>
+    <!-- end of the main part of the webpage -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
