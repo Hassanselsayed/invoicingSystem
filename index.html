@@ -11,7 +11,7 @@
     <title>Invoicing System</title>
 </head>
 
-<body>
+<body class="wrapper">
     <!-- header of the webpage -->
     <header>
         <h1>Invoicing System</h1>
@@ -21,12 +21,14 @@
         <!-- start of the first section -->
         <section>
             <form autocomplete="off" class="addingItem">
-                <label class="inputWidth" for="item">Add an item:</label>
-                <label class="inputWidth" for="price">Price per item ($):</label>
-                <label class="inputWidth" for="quantity">Quantity:</label>
-                <input class="inputWidth" type="text" id="item" placeholder="Please add item here" required>
-                <input class="inputWidth" type="number" min="0" step="0.01" id="price" placeholder="Please enter item price" required>
-                <input class="inputWidth" type="number" min="1" id="quantity" placeholder="Please specify quantity" required>
+                <div class="formFlex">
+                    <label class="inputWidth" for="item">Add an item:</label>
+                    <label class="inputWidth" for="price">Price per item ($):</label>
+                    <label class="inputWidth" for="quantity">Quantity:</label>
+                    <input class="inputWidth" type="text" id="item" placeholder="Please add item here" required>
+                    <input class="inputWidth" type="number" min="0" step="0.01" id="price" placeholder="Please enter item price" required>
+                    <input class="inputWidth" type="number" min="1" id="quantity" placeholder="Please specify quantity" required>
+                </div>
                 <input type="submit" value="Add Item">
             </form>
         </section>
